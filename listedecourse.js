@@ -26,7 +26,7 @@ function addTask() {
     // Réinitialisation de l'input
     taskInput.value = "";
   } 
-}
+} 
 
 // Ajout de la tâche lorsqu'on clique sur le bouton "Ajouter"
 addButton.addEventListener("click", addTask);

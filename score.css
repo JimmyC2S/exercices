@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .score-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .score-label {
+    font-weight: bold;
+  }
+  
+  .score {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  .button-container {
+    margin-bottom: 20px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #maxScore {
+    color: black;
+  }
+  
+  #congratulationsText {
+    font-weight: bold;
+    color: red;
+  }
+  

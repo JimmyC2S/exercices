@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Score Counter</title>
+  <link rel="stylesheet" href="score.css">
+</head>
+<body>
+  <h1>Score Counter</h1>
+
+  <div class="score-container">
+    <div class="score-label">Player 1 Score:</div>
+    <div id="player1Score" class="score">0</div>
+  </div>
+
+  <div class="score-container">
+    <div class="score-label">Player 2 Score:</div>
+    <div id="player2Score" class="score">0</div>
+  </div>
+
+  <div class="score-container">
+    <div class="score-label">Max Score:</div>
+    <div id="maxScore" class="score">10</div>
+    <div id="congratulationsText"></div>
+  </div>
+
+  <div class="button-container">
+    <button id="player1Button" class="button">Player 1</button>
+    <button id="player2Button" class="button">Player 2</button>
+  </div>
+
+  <div class="button-container">
+    <button id="resetButton" class="button">Reset</button>
+    <button id="increaseButton" class="button">+</button>
+    <button id="decreaseButton" class="button">-</button>
+  </div>
+
+  <script src="score.js"></script>
+</body>
+</html>
