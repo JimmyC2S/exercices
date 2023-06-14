@@ -1,0 +1,59 @@
+#game-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#combat-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+#player, #monster {
+  flex-basis: 50%;
+}
+
+.joueurs{display:flex;
+}
+
+#player{
+  display: block;
+  text-align: left;
+}
+
+#monster {
+  display: block;
+  text-align: left ;
+  justify-content: center ;
+}
+
+.health-bar {
+  width: 50%;
+  height: 20px;
+  background-color: #eee;
+  margin-bottom: 10px;
+}
+
+.health {
+  height: 100%;
+  background-color: green;
+}
+
+#monster-health{
+  background-color: red;
+}
+
+#action-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#log p {
+  margin: 5px 0;
+}
+
+button {
+  margin-right: 10px;
+}
