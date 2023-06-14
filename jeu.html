@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <title>Jeu de combat</title>
   <link rel="stylesheet" type="text/css" href="jeu.css">
   <script src="jeu.js"></script>
@@ -8,8 +12,11 @@
 <body>
   <div id="game-container">
     <h1><p style="text-align: center;">Jeu de combat</span></h1>
-    
+      <div class="image">
+        <img src="mario.png"  alt="">
+      </div>
     <div id="start-button-container">
+      <p style="text-align: center;"></p>
       <button id="start-button" onclick="startCombat()">Démarrer le combat</button>
     </div>
     
@@ -38,8 +45,10 @@
         <button onclick="resetCombat()">Réinitialiser le combat</button>
     </div>
     
-    <div id="log"></div>
+    
   </div>
+  
+<div id="log"></div>
 </body>
 </html>
 
