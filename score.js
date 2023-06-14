@@ -1,17 +1,17 @@
 // Sélection des éléments HTML
-var player1ScoreElement = document.getElementById("player1Score");
-var player2ScoreElement = document.getElementById("player2Score");
-var maxScoreElement = document.getElementById("maxScore");
-var player1Button = document.getElementById("player1Button");
-var player2Button = document.getElementById("player2Button");
-var resetButton = document.getElementById("resetButton");
-var increaseButton = document.getElementById("increaseButton");
-var decreaseButton = document.getElementById("decreaseButton");
-var congratulationsText = document.getElementById("congratulationsText");
+let player1ScoreElement = document.getElementById("player1Score");
+let player2ScoreElement = document.getElementById("player2Score");
+let maxScoreElement = document.getElementById("maxScore");
+let player1Button = document.getElementById("player1Button");
+let player2Button = document.getElementById("player2Button");
+let resetButton = document.getElementById("resetButton");
+let increaseButton = document.getElementById("increaseButton");
+let decreaseButton = document.getElementById("decreaseButton");
+let congratulationsText = document.getElementById("congratulationsText");
 
-var player1Score = 0;
-var player2Score = 0;
-var maxScore = parseInt(maxScoreElement.textContent);
+let player1Score = 0;
+let player2Score = 0;
+let maxScore = parseInt(maxScoreElement.textContent);
 
 // Mise à jour du score du joueur 1
 function updatePlayer1Score() {

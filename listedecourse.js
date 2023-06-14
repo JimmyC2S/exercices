@@ -1,19 +1,19 @@
 // Sélection des éléments HTML
-var taskInput = document.getElementById("taskInput");
-var addButton = document.getElementById("addButton");
-var taskList = document.getElementById("taskList");
+let taskInput = document.getElementById("taskInput");
+let addButton = document.getElementById("addButton");
+let taskList = document.getElementById("taskList");
 
 // Ajout d'une tâche à la liste
 function addTask() {
-  var taskText = taskInput.value.trim();
+  let taskText = taskInput.value.trim();
   
   if (taskText !== "") {
-    var li = document.createElement("li");
+    let li = document.createElement("li");
     li.textContent = taskText;
     taskList.appendChild(li);
     
     // Ajout d'un bouton de suppression
-    var deleteButton = document.createElement("button");
+    let deleteButton = document.createElement("button");
     deleteButton.textContent = "Supprimer";
     deleteButton.classList.add("delete-button");
     li.appendChild(deleteButton);
@@ -40,9 +40,9 @@ taskInput.addEventListener("keydown", function(event) {
 
 // Affichage de l'élément saisi en temps réel
 taskInput.addEventListener("input", function() {
-  var taskText = taskInput.value.trim();
+  let taskText = taskInput.value.trim();
   if (taskText !== "") {
-    var previewElement = document.getElementById("preview");
+    let previewElement = document.getElementById("preview");
     if (!previewElement) {
       previewElement = document.createElement("p");
       previewElement.id = "preview";
@@ -50,7 +50,7 @@ taskInput.addEventListener("input", function() {
     }
     previewElement.textContent = "En train de saisir : " + taskText;
   } else {
-    var previewElement = document.getElementById("preview");
+    let previewElement = document.getElementById("preview");
     if (previewElement) {
       previewElement.remove();
     }
