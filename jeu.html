@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeu de combat</title>
+  <link rel="stylesheet" type="text/css" href="jeu.css">
+  <script src="jeu.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <h1><p style="text-align: center;">Jeu de combat</span></h1>
+    
+    <div id="start-button-container">
+      <button id="start-button" onclick="startCombat()">Démarrer le combat</button>
+    </div>
+    
+    
+    <div id="action-buttons" style="display: none;">
+      <div class="joueurs">
+      <div id="player">
+        <h2>Joueur</h2>
+        <div class="health-bar">
+          <div id="player-health" class="health"></div>
+        </div>
+        
+      </div>
+      
+      <div id="monster">
+        <h2><p style=color:red> Monstre</h2>
+        <div class="health-bar">
+          <div id="monster-health" class="health"></div>
+        </div>
+      </div>
+      </div>
+        <button onclick="attack()">Attaque</button>
+        <button onclick="specialAttack()">Attaque spéciale</button>
+        <button onclick="heal()">Soin</button>
+        <button onclick="giveUp()">Abandon</button>
+        <button onclick="resetCombat()">Réinitialiser le combat</button>
+    </div>
+    
+    <div id="log"></div>
+  </div>
+</body>
+</html>
+
