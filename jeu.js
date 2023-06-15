@@ -8,6 +8,25 @@ function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+//fonction désactiver les boutons à la fin du combat
+let actionsButtons= document.getElementById("action-buttons").getElementsByTagName("button");;
+
+function disableButtons() {
+    for (let i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+}
+
+function endCombat(message) {
+  let logElement = document.createElement("p");
+  logElement.textContent = message;
+  log.appendChild(logElement);
+
+  disableButtons();
+}
+
+
+
 // Fonction pour mettre à jour les barres de vie
 function updateHealthBars() {
   document.getElementById("player-health").style.width = playerHealth + "%";
@@ -42,16 +61,18 @@ function logHeal(message) {
 }
 
 // Fonction pour gérer l'attaque du joueur
+
 function attack() {
+  if(playerHealth > 0){
   let damage = getRandomNumber(3, 10);
   monsterHealth -= damage;
   monsterHealth = Math.max(0, monsterHealth); // Assure que la vie ne devienne pas négative
   updateHealthBars();
   
   logPlayerAttack("Vous attaquez le monstre et infligez " + damage + " points de dégâts !");
-  
+  monsterAttack()
   // Vérifier si le monstre a été vaincu
-  if (monsterHealth === 0) {
+}else if (monsterHealth === 0) {
     alert("Vous avez vaincu le monstre !");
   } else {
     monsterAttack();
@@ -60,14 +81,15 @@ function attack() {
 
 // Fonction pour gérer l'attaque spéciale du joueur
 function specialAttack() {
+  if(playerHealth >0){
   let damage = getRandomNumber(10, 20);
   monsterHealth -= damage;
   monsterHealth = Math.max(0, monsterHealth);
   updateHealthBars();
   
   logPlayerAttack("Vous lancez une attaque spéciale et infligez " + damage + " points de dégâts !");
-  
-  if (monsterHealth === 0) {
+  monsterAttack();
+}else if (monsterHealth === 0) {
     alert("Vous avez vaincu le monstre !");
   } else {
     monsterAttack();
@@ -76,6 +98,7 @@ function specialAttack() {
 
 // Fonction pour gérer le soin du joueur
 function heal() {
+  if(playerHealth >0){
   let healPoints = 10;
   playerHealth += healPoints;
   playerHealth = Math.min(100, playerHealth); // Assure que la vie ne dépasse pas 100
@@ -84,10 +107,11 @@ function heal() {
   logHeal("Vous vous soignez et récupérez " + healPoints + " points de vie !");
   
   monsterAttack();
-}
+}}
 
 // Fonction pour gérer l'attaque du monstre
 function monsterAttack() {
+  if (monsterHealth>0){
   let damage = getRandomNumber(5, 10);
   playerHealth -= damage;
   playerHealth = Math.max(0, playerHealth);
@@ -96,9 +120,9 @@ function monsterAttack() {
   logMonsterAttack("Le monstre attaque et vous inflige " + damage + " points de dégâts !");
   
   // Vérifier si le joueur a été vaincu
-  if (playerHealth === 0) {
-    alert("Le monstre vous a vaincu !");
-  }
+  if (playerHealth === 0) {alert("Le monstre vous a vaincu !");
+  disableButtons();
+  }}
 }
 
 // Fonction pour gérer l'abandon du joueur
@@ -131,6 +155,13 @@ function resetCombat() {
     let logElement = document.getElementById("log");
     logElement.innerHTML = "";
   }
+
+
+
+
+
+
+
 
 // Fonction pour démarrer le combat
 function startCombat() {

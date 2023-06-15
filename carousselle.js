@@ -1,4 +1,4 @@
-let images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // Ajoutez ici les noms de vos images
+let images = ["image1.jpg", "image2.jpg", "image3.jpg"]; // fonction nom des images
 let currentIndex = 0;
 let imageElement = document.getElementById("image");
 
